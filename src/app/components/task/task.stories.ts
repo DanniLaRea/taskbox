@@ -1,6 +1,8 @@
-import { Meta, Story } from "@storybook/angular";
+import { Meta, Story } from '@storybook/angular';
+
 import { action } from '@storybook/addon-actions';
-import { TaskComponent } from "./task.component";
+
+import { TaskComponent } from './task.component';
 
 export default {
   component: TaskComponent,
@@ -10,8 +12,8 @@ export default {
 
 export const actionsData = {
   onPinTask: action('onPinTask'),
-  onArchiveTask: action('onArchiveTask')
-}
+  onArchiveTask: action('onArchiveTask'),
+};
 
 const Template: Story = args => ({
   props: {
