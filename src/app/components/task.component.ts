@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input, Output } from "@angular/core";
+
+import { Task } from "../models/task.model";
 @Component({
   selector: 'app-task',
   template: `
@@ -42,7 +44,7 @@ import { Component, EventEmitter, Input, Output } from "@angular/core";
   `,
 })
 export class TaskComponent {
-  @Input() task: any;
+  @Input() task: Task;
 
   @Output()
   onPinTask = new EventEmitter<Event>();
