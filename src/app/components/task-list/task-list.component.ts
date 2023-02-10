@@ -16,13 +16,13 @@ export class TaskListComponent implements OnInit {
   @Input() loading = false;
 
   @Output()
-  onPinTask = new EventEmitter<Event>();
+  onPinTask: EventEmitter<Event> = new EventEmitter<Event>();
 
   @Output()
-  onArchiveTask = new EventEmitter<Event>();
+  onArchiveTask: EventEmitter<Event> = new EventEmitter<Event>();
 
   @Input()
-  setTasks(arr: Task[]) {
+  set tasks(arr: Task[]) {
     const initialTasks = [
       ...arr.filter(t => t.state === 'TASK_PINNED'),
       ...arr.filter(t => t.state !== 'TASK_PINNED'),
